@@ -5,13 +5,13 @@
   "description": "Kindle-style reader mode for Wikipedia. Extract article text into a clean, customizable reading overlay.",
   "permissions": ["activeTab", "scripting", "storage"],
   "action": {
-    "default_popup": "popup.html"
+    "default_popup": "src/popup/popup.html"
   },
   "content_scripts": [
     {
       "matches": ["*://*.wikipedia.org/*"],
-      "js": ["content.js"],
-      "css": ["content.css"]
+      "js": ["src/content/content.js"],
+      "css": ["src/content/content.css"]
     }
   ]
 }

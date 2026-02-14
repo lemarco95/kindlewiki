@@ -52,11 +52,11 @@ async function ensureContentScript() {
     try {
       await chrome.scripting.executeScript({
         target: { tabId: tab.id },
-        files: ['content.js'],
+        files: ['src/content/content.js'],
       });
       await chrome.scripting.insertCSS({
         target: { tabId: tab.id },
-        files: ['content.css'],
+        files: ['src/content/content.css'],
       });
       // Small delay to let the script initialize
       await new Promise((r) => setTimeout(r, 100));

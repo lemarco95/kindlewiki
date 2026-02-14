@@ -36,13 +36,21 @@ For anything the auto-detection misses, the **Element Picker** mode lets you cli
 ## Project Structure
 
 ```
-focus-mode-extension/
-├── manifest.json      # Extension config (Manifest V3)
-├── popup.html         # Popup UI
-├── popup.js           # Popup logic & messaging
-├── content.js         # Core logic: detection, dimming, picker
-├── content.css        # Focus mode visual styles
-├── icons/             # Extension icons (16, 48, 128px)
+focus-mode/
+├── src/
+│   ├── popup/
+│   │   ├── popup.html      # Popup UI
+│   │   ├── popup.js        # Popup logic & messaging
+│   │   └── popup.css       # Popup styles
+│   ├── content/
+│   │   ├── content.js      # Core logic: reader mode engine
+│   │   └── content.css     # Reader overlay styles
+│   └── assets/
+│       └── icons/          # Extension icons
+├── manifest.json           # Extension config (Manifest V3)
+├── .gitignore
+├── .editorconfig
+├── LICENSE
 └── README.md
 ```
 

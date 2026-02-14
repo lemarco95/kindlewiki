@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Focus Mode</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <div class="logo">&#x1F4D6;</div>
+      <div class="header-text">
+        <h1>Focus Mode</h1>
+        <p>Kindle-style reader for Wikipedia</p>
+      </div>
+    </div>
+
+    <div class="status-bar">
+      <div class="status-dot" id="statusDot"></div>
+      <span class="status-text" id="statusText">Inactive</span>
+      <span class="status-preview" id="statusPreview"></span>
+    </div>
+
+    <div class="error-msg" id="errorMsg">
+      Could not extract article content from this page.
+    </div>
+
+    <button class="toggle-btn activate" id="toggleBtn">
+      Enter Reader Mode
+    </button>
+
+    <button class="settings-toggle" id="settingsToggle">
+      <span>Settings</span>
+      <span class="arrow">&#x25BC;</span>
+    </button>
+
+    <div class="settings-panel" id="settingsPanel">
+      <div class="settings-content">
+        <div class="setting-row">
+          <span class="setting-label">Font Size</span>
+          <div class="setting-options">
+            <button class="setting-btn" id="fontDown">A&minus;</button>
+            <span class="font-size-display" id="fontSizeDisplay">20px</span>
+            <button class="setting-btn" id="fontUp">A+</button>
+          </div>
+        </div>
+
+        <div class="setting-row">
+          <span class="setting-label">Font</span>
+          <div class="setting-options" id="fontOptions">
+            <button class="setting-btn active" data-font="serif">Serif</button>
+            <button class="setting-btn" data-font="sans">Sans</button>
+            <button class="setting-btn" data-font="mono">Mono</button>
+          </div>
+        </div>
+
+        <div class="setting-row">
+          <span class="setting-label">Theme</span>
+          <div class="setting-options" id="themeOptions">
+            <button class="setting-btn active" data-theme="light">Light</button>
+            <button class="setting-btn" data-theme="sepia">Sepia</button>
+            <button class="setting-btn" data-theme="dark">Dark</button>
+          </div>
+        </div>
+
+        <div class="setting-row">
+          <span class="setting-label">Spacing</span>
+          <div class="setting-options" id="spacingOptions">
+            <button class="setting-btn" data-spacing="compact">Compact</button>
+            <button class="setting-btn active" data-spacing="normal">Normal</button>
+            <button class="setting-btn" data-spacing="relaxed">Relaxed</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hint">
+      Press <kbd>Esc</kbd> to close &middot; <kbd>T</kbd> to cycle theme
+    </div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
