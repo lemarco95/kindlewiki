@@ -1,6 +1,6 @@
-#  Focus Mode — Chrome Extension
+# KindleWiki
 
-A lightweight Chrome extension that hides distracting elements on any webpage so you can focus on what matters.
+A Chrome extension that transforms Wikipedia articles into a clean, Kindle-style reading experience. Built specifically for Wikipedia, KindleWiki strips away navigation, sidebars, and clutter to let you focus entirely on the article content.
 
 ![Chrome Extension](https://img.shields.io/badge/Chrome-Extension-6366f1?style=flat-square&logo=googlechrome&logoColor=white)
 ![Manifest V3](https://img.shields.io/badge/Manifest-V3-22c55e?style=flat-square)
@@ -8,19 +8,19 @@ A lightweight Chrome extension that hides distracting elements on any webpage so
 
 ## Features
 
-- **Auto-detect distractions** — Automatically dims sidebars, ads, comments, related content, cookie banners, newsletter popups, and more
-- **Smart content detection** — Finds and highlights the main content area of the page
-- **Manual element picker** — Click on any element to hide it completely (press `Esc` to stop picking)
-- **Undo support** — Restore hidden elements one at a time
-- **Hover to peek** — Dimmed elements become slightly visible on hover
-- **Per-site state** — Extension remembers if Focus Mode is active per domain
+- **Kindle-style reader mode** — Extracts Wikipedia article text into a distraction-free overlay optimized for long-form reading
+- **Multiple themes** — Light, sepia, and dark modes for comfortable reading in any environment
+- **Customizable typography** — Adjust font size, font family (serif, sans, mono), and line spacing
+- **Auto-generated table of contents** — Navigate long articles with a collapsible sidebar TOC built from article headings
+- **Reading progress** — Progress bar tracks how far you've read through an article
+- **Reading time estimate** — See estimated reading time before you dive in
+- **Keyboard shortcuts** — `Esc` to close, `T` to cycle themes, `+`/`-` for font size
+- **Persistent preferences** — Your settings are saved across sessions
 - **Zero permissions abuse** — Only requests `activeTab`, `scripting`, and `storage`
 
 ## How It Works
 
-Focus Mode uses a curated list of CSS selectors to identify common distracting elements (sidebars, ads, comments, social widgets, etc.) and applies a dim + blur effect to them. It also uses a heuristic to find the main content area and highlights it with a subtle border.
-
-For anything the auto-detection misses, the **Element Picker** mode lets you click on any element to hide it entirely.
+KindleWiki activates on any Wikipedia page. When you enter reader mode, it extracts the article content from Wikipedia's DOM, strips out edit links, navigation boxes, reference lists, and other non-essential elements, then presents the clean text in a full-screen reading overlay with customizable typography and theming.
 
 ## Installation
 
@@ -62,12 +62,7 @@ kindlewiki/
 - **Chrome Messaging API** — Communication between popup and content script
 - **Chrome Storage API** — Persist state across sessions
 
-## What I Learned
 
-- Chrome Extension architecture: content scripts, popups, service workers, and how they communicate
-- DOM traversal heuristics for identifying semantic page regions
-- Manifest V3 permissions model and security best practices
-- CSS `pointer-events`, `filter`, and `z-index` stacking for non-intrusive overlays
 
 ## License
 
