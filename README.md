@@ -26,17 +26,17 @@ For anything the auto-detection misses, the **Element Picker** mode lets you cli
 
 1. Clone this repository:
    ```bash
-   git clone https://github.com/YOUR_USERNAME/focus-mode-extension.git
+   git clone https://github.com/YOUR_USERNAME/kindlewiki.git
    ```
 2. Open Chrome and go to `chrome://extensions`
 3. Enable **Developer mode** (top right)
 4. Click **Load unpacked**
-5. Select the `focus-mode-extension` folder
+5. Select the `kindlewiki` folder
 
 ## Project Structure
 
 ```
-focus-mode/
+kindlewiki/
 ├── src/
 │   ├── popup/
 │   │   ├── popup.html      # Popup UI
